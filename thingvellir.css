@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    background-color: rgb(255, 174, 0);
+    font-family: "Fira Sans Condensed", sans-serif;
+}
+header {
+    background-image: url("myndir/landing-þingvellir.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 75vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+nav {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    height: 80px;
+}
+
+nav a {
+    border: 1px solid black;
+    background-color: rgb(243, 156, 121);
+    padding: 10px;
+    margin: 5px auto;
+    flex-grow: 1;
+    align-content: center;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+.bakgrunnur {
+    background-color: navajowhite;
+    margin: 0 0;
+}
+.mynd {
+    grid-area: mynd;
+    align-self: start;
+}
+.mynd img {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+.þingvellir1 {
+    grid-area: þingvellir1;
+    padding: 5px;
+    line-height: 1.6;
+}
+.þingvellir2 {
+    grid-area: þingvellir2;
+    padding: 5px;
+    line-height: 1.6;
+}
+img {
+    display: none;
+}
+.nemandi {
+    grid-area: nemandi;
+}
+.namsefni {
+    grid-area: namsefni;
+}
+.map {
+    grid-area: map;
+    padding: 5px;
+}
+@media screen and (min-width: 30em) {
+    }
+
+
+@media screen and (min-width: 48em){
+    main {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+        grid-template-areas:
+            "þingvellir1 mynd"
+            "þingvellir2 mynd";
+        gap: 1.5rem 2rem;
+        width: 80%;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+    .lysing {
+        font-size: 24px;
+    }
+
+    .þingvellir1,
+    .þingvellir2 {
+        padding: 0;
+    }
+
+    img {
+        display: block;
+    }
+
+    footer {
+        display: grid;
+        grid-template-areas:
+        "nemandi namsefni map";
+    }
+}
+@media screen and (min-width: 60em){
+    main {
+        width: 60%;
+    }
+}

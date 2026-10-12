@@ -104,11 +104,17 @@ footer {
 }
 .map {
     grid-area: map;
+    padding: 5px;
 }
 img {
         display:none;
 }
-
+hr {
+    color:black;
+}
+div{
+    padding: 2px;
+}
 @media screen and (min-width: 30em) {
     }
 

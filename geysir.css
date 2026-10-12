@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    background-color: rgb(255, 174, 0);
+    font-family: "Fira Sans Condensed", sans-serif;
+}
+header {
+    background-image: url("myndir/landing-geysir.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+nav {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    height: 80px;
+}
+
+nav a {
+    border: 1px solid black;
+    background-color: rgb(243, 156, 121);
+    padding: 10px;
+    margin: 5px auto;
+    flex-grow: 1;
+    align-content: center;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+.bakgrunnur {
+    background-color: navajowhite;
+    margin: 0 0;
+}
+.mynd {
+    grid-area: mynd;
+}
+.mynd img {
+    width: 50%;
+    height: 150px;
+    object-position: center;
+}
+.intro{
+    grid-area: intro;
+}
+.geysir{
+    grid-area: geysir;
+}
+img {
+    display: none;
+}
+.nemandi {
+    grid-area: nemandi;
+}
+.namsefni {
+    grid-area: namsefni;
+}
+.map {
+    grid-area: map;
+    padding: 5px;
+}
+section{
+    padding: 5px;
+}
+@media screen and (min-width: 30em) {
+    }
+
+
+@media screen and (min-width: 48em){
+    main {
+        display: grid;
+        grid-template-columns: 1.8fr 1fr;
+        grid-template-areas:
+            "intro mynd"
+            "geysir mynd";
+        width: 80%;
+        margin: 0 auto;
+        gap: 1.5rem;
+        align-items: start;
+    }
+    .intro {
+        grid-area: intro;
+    }
+    .geysir {
+        grid-area: geysir;
+    }
+    .mynd {
+        grid-area: mynd;
+        align-self: center;
+    }
+    .mynd img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .lysing {
+        font-size: 24px;
+    }
+    img {
+        display:block;
+    }
+    footer {
+        display: grid;
+        grid-template-areas:
+        "nemandi namsefni map";
+    }
+}
+
+
+@media screen and (min-width: 60em){
+    main {
+        width: 60%;
+    }
+}
