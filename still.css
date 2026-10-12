@@ -98,13 +98,15 @@ footer {
 
 .nemandi {
     grid-area: nemandi;
+    padding: 10px;
 }
 .namsefni {
     grid-area: namsefni;
+    padding: 10px;
 }
 .map {
     grid-area: map;
-    padding: 5px;
+    padding: 10px;
 }
 img {
         display:none;
